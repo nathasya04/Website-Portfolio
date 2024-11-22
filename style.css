@@ -1,0 +1,439 @@
+/* style.css */
+
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00ff88;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #121212, #1f1f1f);
+}
+
+.hero-section .hero-image {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Hero Section - Foto Styling */
+.hero-section .hero-image img {
+    width: 300px; /* Ukuran tetap */
+    height: 300px; /* Ukuran tetap */
+    object-fit: cover; /* Memastikan gambar terpotong secara proporsional */
+    border: 5px solid #2a2a2a; /* Bingkai pada gambar */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    transition: transform 0.3s ease;
+}
+
+.hero-section .hero-image:hover img {
+    transform: scale(1.1); /* Efek zoom saat di-hover */
+}
+
+.hero-section .icon-frame {
+    bottom: -10px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Animations */
+.hero-section h1 {
+    animation: fadeInLeft 1s ease;
+    
+}
+
+.hero-section p {
+    animation: fadeInLeft 1.5s ease;
+}
+
+.hero-section .btn {
+    animation: fadeInUp 2s ease;
+}
+
+/* Keyframes */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tombol Discover More */
+.btn-discover {
+    background: linear-gradient(135deg, #00ff88, #0088ff);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.btn-discover:hover {
+    background: linear-gradient(135deg, #0088ff, #00ff88);
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* About Section */
+#about {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Card Styling */
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* style.css */
+
+/* Animasi hover pada tombol */
+.btn-primary,
+.btn-outline-success {
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover,
+.btn-outline-success:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#skills {
+    background: linear-gradient(to bottom right, #1f1f1f, #343a40);
+}
+
+canvas {
+    max-width: 150px;
+    margin: auto;
+}
+
+
+/* Project Section */
+#projects {
+    position: relative;
+    overflow: hidden;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* Project Card */
+.project-card {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #2a2a2a;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on project card */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Image */
+.project-image img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-bottom: 3px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+/* Project Details */
+.project-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-details h5 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-details p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    background: linear-gradient(45deg, #6b8dff, #536dfe);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect on button */
+.project-btn:hover {
+    background: linear-gradient(45deg, #3e64fe, #5160e4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        margin-bottom: 15px;
+    }
+    
+    .project-details h5 {
+        font-size: 1.25rem;
+    }
+}
+
+/* style.css */
+
+/* Dekorasi lingkaran */
+.circle-deco {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+/* Foto profil */
+.photo-frame {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+.photo-frame:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Project Cards */
+.project-card {
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.project-card img {
+    transition: transform 0.3s;
+}
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Media Section Styling */
+#media {
+    background-color: #3d3737;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#media h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #fff;
+    animation: fadeInDown 1s ease;
+}
+
+/* Media Logo Styling */
+.media-logo img {
+    width: 80px;
+    height: auto;
+    filter: brightness(0.9) grayscale(1); /* Grayscale untuk tampilan minimalis */
+    transition: all 0.3s ease;
+}
+
+.media-logo img:hover {
+    filter: brightness(1) grayscale(0); /* Warna kembali saat di-hover */
+    transform: scale(1.1); /* Zoom saat di-hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #media h2 {
+        font-size: 2rem;
+    }
+
+    .media-logo img {
+        width: 60px;
+    }
+}
+
+
+
+
+/* Contact Section Styling */
+#contact {
+    background: linear-gradient(135deg, #212121, #333333); /* Gradasi gelap yang modern */
+    color: #fff;
+    padding-top: 60px; /* Spasi atas untuk header */
+}
+
+.card {
+    border-radius: 12px;
+    background-color: #2b2b2b; /* Warna latar belakang kartu */
+    padding: 30px;
+}
+
+input,
+textarea {
+    background-color: #444444;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Fokus pada Input dan Textarea */
+input:focus,
+textarea:focus {
+    background-color: #333333;
+    border-color: #008cba; /* Warna biru pada focus */
+    outline: none;
+}
+
+button {
+    background: linear-gradient(45deg, #0099ff, #33cc99); /* Gradasi biru-hijau */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #33cc99, #0099ff); /* Efek hover tombol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasi untuk Kartu Formulir */
+#contact .card {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    .col-md-6 {
+        max-width: 100%;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
