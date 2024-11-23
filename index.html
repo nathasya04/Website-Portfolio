@@ -406,36 +406,18 @@
         { id: 'softSkillsChart', label: 'Soft Skills', data: [85, 15], colors: ['#f44336', '#2a2a2a'] },
     ];
 
-    // Create the Pie Charts
-    skillsData.forEach(skill => {
-        const ctx = document.getElementById(skill.id).getContext('2d');
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Skill', 'Remaining'],
-                datasets: [{
-                    data: skill.data,
-                    backgroundColor: skill.colors,
-                    borderWidth: 0,
-                }],
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: false,
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function (tooltipItem) {
-                                const percentage = skill.data[tooltipItem.dataIndex];
-                                return `${tooltipItem.label}: ${percentage}%`;
-                            }
-                        }
-                    }
-                },
-            },
-        });
+   <script>
+    // Progress Bar Animation on Scroll
+    window.addEventListener("scroll", () => {
+        const skillSection = document.querySelector("#skills");
+        const progressBars = document.querySelectorAll(".progress-bar");
+
+        if (skillSection.getBoundingClientRect().top < window.innerHeight - 100) {
+            progressBars.forEach(bar => {
+                const value = bar.getAttribute("aria-valuenow");
+                bar.style.width = value + "%";
+            });
+        }
     });
 </script>
 
