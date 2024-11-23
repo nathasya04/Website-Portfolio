@@ -304,6 +304,19 @@ h2 {
     font-size: 0.9rem;
 }
 
+.progress {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #skills .row > div {
+        margin-bottom: 30px;
+    }
+}
+
+
 
 /* Project Cards */
 .project-card {
